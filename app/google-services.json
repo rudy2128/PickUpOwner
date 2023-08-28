@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "202473398943",
+    "firebase_url": "https://persontracking-39122-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "persontracking-39122",
+    "storage_bucket": "persontracking-39122.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202473398943:android:91231093765f662132f8aa",
+        "android_client_info": {
+          "package_name": "com.anthony.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202473398943-q4ouirdqrj27p7kb5ravsifulv6i5aom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE4i-wdpvpLEw_C2HT91aJJqjfeqU6Fjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202473398943-q4ouirdqrj27p7kb5ravsifulv6i5aom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202473398943:android:0f5a5a1f2982e67232f8aa",
+        "android_client_info": {
+          "package_name": "com.example.positionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202473398943-g8c470pfj2ma22bf3ka73t6mv2ivdgvr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.positionapp",
+            "certificate_hash": "dee50dd350959478275f3c22b07039e7abf21e28"
+          }
+        },
+        {
+          "client_id": "202473398943-q4ouirdqrj27p7kb5ravsifulv6i5aom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE4i-wdpvpLEw_C2HT91aJJqjfeqU6Fjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202473398943-q4ouirdqrj27p7kb5ravsifulv6i5aom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202473398943:android:d12d7ed2865ad9b732f8aa",
+        "android_client_info": {
+          "package_name": "com.fanny.pickerup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202473398943-rri9m6sauq1s9qfg06d6oara0urmj0n2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fanny.pickerup",
+            "certificate_hash": "dee50dd350959478275f3c22b07039e7abf21e28"
+          }
+        },
+        {
+          "client_id": "202473398943-q4ouirdqrj27p7kb5ravsifulv6i5aom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE4i-wdpvpLEw_C2HT91aJJqjfeqU6Fjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202473398943-q4ouirdqrj27p7kb5ravsifulv6i5aom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

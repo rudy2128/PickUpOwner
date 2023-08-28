@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+    <ImageView
+        android:id="@+id/image_adds"
+        android:layout_width="@dimen/m_120"
+        android:layout_height="@dimen/m_120"
+        android:background="@drawable/line_10"
+        android:contentDescription="@string/image_banner"/>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon_pick_user"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Fab_Bottom_app_bar"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.employee.DetailEmpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admob.InputAdvActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.history.DetailHisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.history.HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admob.DetailAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admob.InputAdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.banner.InputBannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.report.ReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.employee.EmployeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.employee.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.trx.TrxActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.trx.FinishActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.otp.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reg.PhoneRegActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reg.RegActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.trx.DetailTrxActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

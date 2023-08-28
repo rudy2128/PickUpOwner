@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.report.ReportActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="2dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:id="@+id/lay_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/v_margin"
+                android:contentDescription="@string/back"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/m_70"
+                android:text="@string/report"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_trx"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/twenty"
+        android:layout_marginStart="@dimen/twenty"
+        android:layout_marginEnd="@dimen/twenty"
+        android:layout_below="@+id/card_first"
+        app:iconifiedByDefault="false"
+        app:searchHintIcon="@null"
+        app:queryHint="Search..."
+        android:focusable="false"
+        app:closeIcon="@drawable/baseline_clear_24"
+        app:searchIcon="@drawable/baseline_search_24"
+        android:padding="@dimen/six_m"
+        android:background="@drawable/line_10"/>
+    <TextView
+        android:id="@+id/tv_qty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_trx"
+        android:layout_marginTop="@dimen/v_margin"
+        android:layout_marginStart="@dimen/twenty"
+        app:drawableLeftCompat="@drawable/ic_trx30"
+        android:text="@string/zero"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:drawablePadding="@dimen/v_margin"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTrx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twenty"
+        android:layout_marginBottom="@dimen/twenty"
+        android:layout_below="@+id/tv_qty"
+        tools:listitem="@layout/item_trx"/>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cardview_light_background"
+        app:itemBackground="@color/hard_yellow"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.history.DetailHisActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="2dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:id="@+id/lay_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/v_margin"
+                android:contentDescription="@string/back"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/m_70"
+                android:text="@string/detail_order"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card_first">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty"
+                android:layout_marginTop="@dimen/v_margin"
+                android:layout_marginEnd="@dimen/twenty"
+                android:drawablePadding="@dimen/v_margin"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                app:drawableStartCompat="@drawable/baseline_people_outline_24" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty"
+                android:layout_marginEnd="@dimen/twenty"
+                android:drawablePadding="@dimen/v_margin"
+                android:text="@string/phone"
+                android:textColor="@color/black"
+                app:drawableStartCompat="@drawable/baseline_phone_24" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty"
+                android:layout_marginEnd="@dimen/twenty"
+                android:drawablePadding="@dimen/v_margin"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                app:drawableStartCompat="@drawable/baseline_person_pin_circle_24" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/twenty"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_map"
+                    android:layout_width="@dimen/m_150"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/yellow"
+                    android:text="@string/see_map" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_card"
+                    android:layout_width="@dimen/m_150"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:backgroundTint="@color/hard_yellow"
+                    android:text="@string/see_stnk" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/order"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_ex"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:text="@string/time_ex"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOrder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_70"
+                android:layout_marginStart="@dimen/twenty"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginEnd="@dimen/twenty"
+                tools:listitem="@layout/item_order" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:textStyle="bold"
+                    android:text="@string/pickUp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_pickUp_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/date_ex"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/six_m"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:text="@string/employee"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_employee_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/employee_name"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/six_m"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/phone"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_employee_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/phone_ex"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/v_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:textStyle="bold"
+                    android:text="@string/sendDate"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_send_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/date_ex"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/six_m"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/employee"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_send_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/employee_name"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/six_m"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/phone"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_send_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/phone_ex"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/v_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:textStyle="bold"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/recipient"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_recipient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/name"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/six_m"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/cost"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/zero"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/six_m"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/m_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/status"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/six_m"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:drawablePadding="@dimen/v_margin"
+                    android:text="@string/not_finish"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <ImageView
+        android:id="@+id/img_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/twenty"
+        android:visibility="invisible"
+        android:contentDescription="@string/stnk_image"/>
+
+
+</RelativeLayout>

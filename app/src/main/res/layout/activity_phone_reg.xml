@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.reg.PhoneRegActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fifty"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:text="@string/input_phone_number"/>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/m_300"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/thirty"
+        android:hint="@string/phone"
+        android:autofillHints="phone"
+        app:boxCornerRadiusBottomEnd="@dimen/v_margin"
+        app:boxCornerRadiusBottomStart="@dimen/v_margin"
+        app:boxCornerRadiusTopEnd="@dimen/v_margin"
+        app:boxCornerRadiusTopStart="@dimen/v_margin"
+        app:endIconMode="clear_text"
+        app:startIconTint="@color/teal_200">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_phone"
+            android:layout_width="@dimen/m_300"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:imeOptions="actionNext"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send"
+        android:layout_width="@dimen/m_150"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fifty"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/hard_yellow"
+        android:background="@drawable/line_10"
+        android:text="@string/submit"/>
+
+</LinearLayout>
